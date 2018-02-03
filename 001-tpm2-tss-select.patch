@@ -1,0 +1,10 @@
+--- tpm2-tss-1.3.0/tcti/tcti_socket.cpp
++++ tpm2-tss-1.3.0-patched/tcti/tcti_socket.cpp
+@@ -27,6 +27,7 @@
+
+ #include <stdio.h>
+ #include <stdlib.h>   // Needed for _wtoi
++#include <sys/select.h>
+
+ #include "sapi/tpm20.h"
+ #include "tcti/tcti_socket.h"
